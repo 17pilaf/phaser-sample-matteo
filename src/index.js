@@ -37,7 +37,7 @@ function create ()
   bird.body.gravity.y= 200;
   
   platforms = this.physics.add.staticGroup();
-  platforms.create(400, 568, 'ground').setScale(2).refreshBody();
+  platforms.create(400, 1100, 'ground').setScale(40).refreshBody();
   
 }
 
