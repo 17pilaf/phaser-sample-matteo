@@ -1,14 +1,13 @@
 {
-  "name": "phaser-webpack-boilerplate",
+  "name": "phaser-sample-matteo",
   "version": "1.0.0",
-  "description": "",
+  "description": "A sample phaser game",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --config webpack.common.js --watch"
   },
-  "author": "",
+  "author": "Matteo",
   "license": "ISC",
   "dependencies": {
     "phaser": "^3.24.1",
