@@ -35,18 +35,47 @@ function create ()
   this.add.image(0,0,'sky').setOrigin(0);
   bird = this.physics.add.sprite(0,300, 'bird').setOrigin(0);
   bird.body.gravity.y= 200;
-  
-  platforms = this.physics.add.staticGroup();
-  platforms.create(400, 1100, 'ground').setScale(40).refreshBody();
+
+
+  // platforms = this.physics.add.staticGroup();
+  // this.physics.add.collider(bird, platforms, hitPlatforms, null, this);
+  // platforms.create(400, 1100, 'ground').setScale(40).refreshBody();
   
 }
 
 function update ()
 {
+  let birdPosition = bird.body.position.y;
+  if(birdPosition < 0 || birdPosition > 600 ) {
+    bird.setTint(0xff0000);
+    alert("Hai perso coglione!");
+    bird.body.position.y = 300;
+    bird.body.position.x = 0;
+    bird.body.velocity.x = 0;
+    bird.body.velocity.y = 0
+  }
 }
 
 function fly() {
  bird.body.velocity.y = -200;
  bird.body.velocity.x = 70
+}
+
+
+function haiperso() {
+      
+  setTimeout(function(){ alert("hai perso"); }, 100)
+}
+
+function hitPlatforms (bird, platforms)
+{
+  this.physics.pause();
+  
+  bird.setTint(0xff0000);
+
+  haiperso()
+
+  
+    
 }
 
